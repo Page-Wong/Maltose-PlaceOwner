@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/equipmentList/equipmentList",
+    "pages/programList/programList",
+    "pages/register/register",
+    "pages/register/registerArgreement",
+    "pages/placeList/placeList",
+    "pages/placeEdit/placeEdit",
+    "pages/programPlay/programPlay",
+    "pages/equipmentRepairApply/equipmentRepairApply"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/placeList/placeList",
+        "iconPath": "image/place.png",
+        "selectedIconPath": "image/placeHL.png",
+        "text": "场所管理"
+      },
+      {
+        "pagePath": "pages/programList/programList",
+        "iconPath": "image/program.png",
+        "selectedIconPath": "image/programHL.png",
+        "text": "内容管理"
+      },
+      {
+        "pagePath": "pages/equipmentList/equipmentList",
+        "iconPath": "image/equipment.png",
+        "selectedIconPath": "image/equipmentHL.png",
+        "text": "设备管理"
+      }
+    ]
+  }
+}

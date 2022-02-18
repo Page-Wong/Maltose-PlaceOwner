@@ -1,0 +1,15 @@
+{
+  "navigationBarTitleText": "注册/绑定",
+  "usingComponents": {
+    "van-field": "../../miniprogram_npm/vant-weapp/field/index",
+    "van-button": "../../miniprogram_npm/vant-weapp/button/index",
+    "van-cell-group": "../../miniprogram_npm/vant-weapp/cell-group/index",
+    "van-row": "../../miniprogram_npm/vant-weapp/row/index",
+    "van-col": "../../miniprogram_npm/vant-weapp/col/index",
+    "van-tag": "../../miniprogram_npm/vant-weapp/tag/index",
+    "van-switch": "../../miniprogram_npm/vant-weapp/switch/index",
+    "van-icon": "../../miniprogram_npm/vant-weapp/icon/index",
+    "van-popup": "../../miniprogram_npm/vant-weapp/popup/index",
+    "van-toast": "../../miniprogram_npm/vant-weapp/toast/index"
+  }
+}

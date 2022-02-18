@@ -1,0 +1,12 @@
+/* pages/placeEdit/placeEdit.wxss */
+
+.weui-uploader__file__img {
+  position: relative;
+  margin-top: 12rpx
+}
+
+.weui-uploader__file__img .weui-uploader__img__delete {
+  position: absolute;
+  top: -.4em;
+  right: -.4em;
+}

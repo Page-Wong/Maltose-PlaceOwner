@@ -1,0 +1,41 @@
+<!--pages/equipmentRepairApply/equipmentRepairApply.wxml-->
+<!--pages/placeEdit/placeEdit.wxml-->
+<view class="page">
+    <view class="page__hd">
+      <view class="page__title">{{data.name}}({{data.equipmentModelDto.manufacturer}} {{data.equipmentModelDto.model}})</view>
+      <view class="page__desc">{{data.placeDto.name}}({{data.placeDto.address}})</view>
+    </view>
+    <form class="page__bd" catchsubmit="save">        
+  
+      <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+              <view class="weui-label">联系人</view>
+          </view>
+          <view class="weui-cell__bd">
+              <input class="weui-input" name="contact" placeholder="请输入联系人"/>
+          </view>
+      </view>     
+  
+      <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+              <view class="weui-label">联系电话</view>
+          </view>
+          <view class="weui-cell__bd">
+              <input class="weui-input" name="phone" placeholder="请输入联系电话"/>
+          </view>
+      </view>  
+
+      <view class="weui-cell">
+          <view class="weui-cell__hd">
+              <view class="weui-label">问题描述</view>
+          </view>
+          <view class="weui-cell__bd">
+              <textarea class="weui-textarea" name="problemDescription" placeholder="请填写问题描述" style="height: 3.3em"/>
+          </view>
+      </view>
+      <view class="weui-btn-area">
+          <button class="weui-btn" formType="submit" type="primary">提交</button>
+      </view>
+    </form>
+</view>
+

@@ -1,0 +1,69 @@
+{
+  "description": "项目配置文件。",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true,
+    "nodeModules": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.3.0",
+  "projectname": "Maltose-PlaceOwner",
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "currentL": -1,
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": 0,
+          "name": "方案审核",
+          "pathName": "pages/login/login",
+          "query": "redirectUrl=/pages/programList/programList&type=tab",
+          "scene": "1035",
+          "referrerInfo": {
+            "appId": "wxd4da2c9be1efd5a1"
+          }
+        },
+        {
+          "id": 1,
+          "name": "方案审核_test",
+          "pathName": "pages/login/login",
+          "query": "redirectUrl=/pages/equipmentList/equipmentList&type=tab",
+          "scene": "1035",
+          "referrerInfo": {
+            "appId": "wx6977eea2062d8d76"
+          }
+        },
+        {
+          "id": 2,
+          "name": "方案审核_placeImageEdit",
+          "pathName": "pages/placeImageEdit/placeImageEdit",
+          "query": "redirectUrl=/pages/placeImageEdit/placeImageEdit?id=08d617cb-1a84-d424-1d04-996cf707cfc3&type=tab",
+          "scene": "1035",
+          "referrerInfo": {
+            "appId": "wx6977eea2062d8d76"
+          }
+        }
+      ]
+    }
+  }
+}

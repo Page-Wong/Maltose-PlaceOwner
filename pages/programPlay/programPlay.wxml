@@ -1,0 +1,25 @@
+<!--pages/programPlay/programPlay.wxml-->
+
+<view class="page">
+    <view class="page__hd">
+      <view class="page__title">内容预览</view>
+      <view class="page__desc">{{program.type == 0 ? "文字内容预览" : "视频内容预览"}}</view>
+    </view>
+    <view class="page__bd"> 
+      <view class="weui-panel">
+        <view class="weui-panel__bd">
+          <view class="play"> 
+            <rich-text nodes="{{program.content}}" wx:if="{{program.type == 0}}"></rich-text>   
+            <video src="{{url}}" loop autoplay controls wx:if="{{program.type == 1}}" style='width:375rpx;height:666rpx;'></video>
+          </view> 
+        </view>
+      </view>
+    </view>
+
+    <view class='page__ft'>
+      <view class="weui-btn-area">
+        <button class="weui-btn" type='primary' bindtap='auditTap' wx:if="{{isNeedAudit}}">审核</button>
+        <button class="weui-btn" bindtap='returnTap'>返回</button>
+      </view>
+    </view>
+</view>

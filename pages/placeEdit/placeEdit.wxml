@@ -1,0 +1,83 @@
+<!--pages/placeEdit/placeEdit.wxml-->
+<view class="page">
+    <form class="page__bd" catchsubmit="save">  
+      <view class="weui-cells__title">编辑场所信息</view>     
+      <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+              <view class="weui-label">场所名称</view>
+          </view>
+          <view class="weui-cell__bd" wx:if='{{place && place.latitude && place.longitude}}'>
+              <input class="weui-input" name="name" placeholder="请输入场所名称"  value="{{place.name}}"/>
+          </view>
+          <view class="weui-cell__ft">
+              <view class="weui-vcode-btn" bindtap='locationTap'>定位</view>
+          </view>
+      </view>
+
+      <view class="weui-cell weui-cell_input weui-cell_vcode" wx:if='{{place && place.latitude && place.longitude}}'>
+          <view class="weui-cell__hd">
+              <view class="weui-label">场所地址</view>
+          </view>
+          <view class="weui-cell__bd">
+              <input class="weui-input" name="address" placeholder="请选择地址" value="{{place.address}}"/>
+          </view>
+      </view>        
+  
+      <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+              <view class="weui-label">联系人</view>
+          </view>
+          <view class="weui-cell__bd">
+              <input class="weui-input" name="contact" placeholder="请输入联系人" value="{{place.contact}}"/>
+          </view>
+      </view>     
+  
+      <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+              <view class="weui-label">联系电话</view>
+          </view>
+          <view class="weui-cell__bd">
+              <input class="weui-input" name="phone" placeholder="请输入联系电话"  value="{{place.phone}}"/>
+          </view>
+      </view>  
+
+      <view class="weui-cell">
+          <view class="weui-cell__hd">
+              <view class="weui-label">场所介绍</view>
+          </view>
+          <view class="weui-cell__bd">
+              <textarea class="weui-textarea" name="introduction" placeholder="请输入场所介绍" style="height: 3.3em" value='{{place.introduction}}'/>
+          </view>
+      </view>
+
+      <view class="weui-cells" wx:if="{{place && place.id!=''}}">
+        <view class="weui-cell">
+          <view class="weui-cell__bd">
+              <view class="weui-uploader">
+                  <view class="weui-uploader__hd">
+                      <view class="weui-uploader__title">图片上传</view>
+                      <view class="weui-uploader__info">{{imgUrls.length}}/{{maxImgCount}}</view>
+                  </view>
+                  <view class="weui-uploader__bd">
+                      <view class="weui-uploader__files" id="uploaderFiles">
+                          <block wx:for="{{imgUrls}}" wx:key="*this">
+                              <view class="weui-uploader__file weui-uploader__file__img">
+                                  <image class="weui-uploader__img" src="{{item.url}}" data-url="{{item.url}}" bindtap="previewImage" mode="aspectFill" />
+                                  <view class="weui-badge weui-uploader__img__delete" bindtap='deleteImage' data-index="{{index}}">X</view>
+                              </view>
+                          </block>
+                      </view>
+                      <view class="weui-uploader__input-box  weui-uploader__file__img" wx:if="{{imgUrls.length<maxImgCount}}">
+                        <view class="weui-uploader__input" bindtap="chooseImage"></view>
+                      </view>
+                  </view>
+                </view>
+            </view>
+        </view>
+      </view>
+      <view class="weui-btn-area">
+          <button class="weui-btn" formType="submit" type="primary">保存</button>
+          <button class="weui-btn" type="warn" bindtap="remove" wx:if="{{place && place.id!=''}}">删除</button>
+      </view>
+    </form>
+</view>

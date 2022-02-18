@@ -1,0 +1,7 @@
+/* pages/placeManager/placeManager.wxss */
+
+.add-link{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size:13px;
+  color: #576b95
+}
